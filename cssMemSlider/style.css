@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Arial', sans-serif;
+    color: aliceblue;
+}
+
+body {
+    background-color: #1b1e1e;
+}
+
+.title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3rem;
+    color: coral;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0.85rem;
+}
+
+input[name="slider"] {
+    display: none;
+}
+
+.slides-wrapper {
+    max-width: 37.5rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    align-items: center;
+    width: 400%;
+    height: inherit;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 25%;
+}
+
+.slide img {
+    max-width: 37.5rem;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 37.5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description-wrapper {
+    max-width: 14rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.descriptions {
+    display: flex;
+    width: 400%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.description {
+    width: 25%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.labels {
+    display: flex;
+    column-gap: 0.6rem
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    cursor: pointer;
+}
+
+label:hover .circle {
+    background-color: aliceblue;
+    border-color: aliceblue;
+}
+
+.circle {
+    width: 1.15rem;
+    height: 1.15rem;
+    border-radius: 50%;
+    background-color: #71abfe;
+    border: 3px solid #71abfe;
+    transition: all 0.3s ease-in-out;
+}
+
+#slide1:checked ~ .wrapper .labels > label:nth-child(1) > .circle,
+#slide2:checked ~ .wrapper .labels > label:nth-child(2) > .circle,
+#slide3:checked ~ .wrapper .labels > label:nth-child(3) > .circle,
+#slide4:checked ~ .wrapper .labels > label:nth-child(4) > .circle {
+    border-color: #71abfe;
+    background-color: inherit;
+}
+
+#slide1:checked:hover ~ .wrapper .labels > label:nth-child(1) > .circle,
+#slide2:checked:hover ~ .wrapper .labels > label:nth-child(2) > .circle,
+#slide3:checked:hover ~ .wrapper .labels > label:nth-child(3) > .circle,
+#slide4:checked:hover ~ .wrapper .labels > label:nth-child(4) > .circle {
+    border-color: aliceblue;
+}
+
+#slide1:checked ~ .slides-wrapper .slides {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .slides-wrapper .slides {
+    transform: translateX(-25%);
+}
+
+#slide3:checked ~ .slides-wrapper .slides {
+    transform: translateX(-50%);
+}
+
+#slide4:checked ~ .slides-wrapper .slides {
+    transform: translateX(-75%);
+}
+
+#slide1:checked ~ .wrapper .description-wrapper .descriptions {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .wrapper .description-wrapper .descriptions {
+    transform: translateX(-25%);
+}
+
+#slide3:checked ~ .wrapper .description-wrapper .descriptions {
+    transform: translateX(-50%);
+}
+
+#slide4:checked ~ .wrapper .description-wrapper .descriptions {
+    transform: translateX(-75%);
+}
+
+@media (max-width: 450px) {
+    .wrapper {
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
+}
