@@ -121,6 +121,14 @@ label:hover .circle {
     background-color: inherit;
 }
 
+#slide1:active ~ .wrapper .labels > label:nth-child(1) > .circle,
+#slide2:active ~ .wrapper .labels > label:nth-child(2) > .circle,
+#slide3:active ~ .wrapper .labels > label:nth-child(3) > .circle,
+#slide4:active ~ .wrapper .labels > label:nth-child(4) > .circle {
+    background-color: coral;
+    border-color: coral;
+}
+
 #slide1:checked:hover ~ .wrapper .labels > label:nth-child(1) > .circle,
 #slide2:checked:hover ~ .wrapper .labels > label:nth-child(2) > .circle,
 #slide3:checked:hover ~ .wrapper .labels > label:nth-child(3) > .circle,
