@@ -2,9 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>cssMemSlider</title>
 </head>
 <body>
-
+<div class="container">
+    <div class="inputs">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+    </div>
+    <h1 class="title">cssMemSlider</h1>
+    <div class="slides-wrapper">
+        <div class="slides">
+            <div class="slide">
+                <img src="./assets/1.jpg" alt="meme">
+            </div>
+            <div class="slide">
+                <img src="./assets/2.jpg" alt="meme">
+            </div>
+            <div class="slide">
+                <img src="./assets/3.png" alt="meme">
+            </div>
+            <div class="slide">
+                <img src="./assets/4.jpg" alt="meme">
+            </div>
+        </div>
+    </div>
+    <div class="description-wrapper">
+        <div class="descriptions">
+            <div class="description">I am best of the best</div>
+            <div class="description">404 not found</div>
+            <div class="description">Hard work - pays off</div>
+            <div class="description">Well done :)</div>
+        </div>
+    </div>
+    <div class="labels">
+        <label for="slide1"><div class="circle"></div></label>
+        <label for="slide2"><div class="circle"></div></label>
+        <label for="slide3"><div class="circle"></div></label>
+        <label for="slide4"><div class="circle"></div></label>
+    </div>
+</div>
 </body>
 </html>
