@@ -22,7 +22,7 @@ body {
 
 .container {
     min-height: 100vh;
-    padding: 0.5rem;
+    padding: 0.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,7 +109,7 @@ label:hover .circle {
     height: 1.15rem;
     border-radius: 50%;
     background-color: #71abfe;
-    border: 3px solid #71abfe;
+    border: 0.2rem solid #71abfe;
     transition: all 0.3s ease-in-out;
 }
 
@@ -168,9 +168,22 @@ label:hover .circle {
     transform: translateX(-75%);
 }
 
-@media (max-width: 450px) {
+@media (max-width: 28.1rem) {
     .wrapper {
         flex-direction: column;
-        row-gap: 0.5rem;
+        row-gap: 1.8rem;
+    }
+
+    .description-wrapper {
+        order: 3;
+        align-self: flex-start;
+    }
+
+    .descriptions {
+        column-gap: 0.1rem;
+    }
+
+    .description {
+        text-align: initial;
     }
 }
